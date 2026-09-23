@@ -12,9 +12,9 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useDAGStore } from '../store/dag'
-const store = useDAGStore()
-const breakers = computed(() => store.execution?.circuitBreakers || [])
+import { useExecutionStore } from '../store/execution'
+const store = useExecutionStore()
+const breakers = computed(() => store.breakers)
 </script>
 <style scoped>
 .panel{background:#1a1a2e;border-radius:8px;padding:10px;border:1px solid #2a2a4a}
